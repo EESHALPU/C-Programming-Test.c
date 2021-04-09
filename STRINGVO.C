@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+ char a[50],i,j,n;
+ printf("enter a string");
+ gets(a);
+ n=strlen(a);
+ for(i=0;i<n;i++)
+ {
+  if(a[i]=='a')
+  {
+   a[i]=a[i+1];
+   n--;
+  }
+  if(a[i]=='e')
+  {
+   a[i]=a[i+1];
+   n--;
+  }
+  if(a[i]=='i')
+  {
+   for(j=i;j<n;j++)
+   a[i]=a[i+1];
+   n--;
+  }
+  if(a[i]=='o')
+  {
+   a[i]=a[i+1];
+   n--;
+  }
+  if(a[i]=='u')
+  {
+   a[i]=a[i+1];
+   n--;
+  }
+ }
+ puts(a);
+ for(i=0;i<n;i++)
+ if(a[i]==a[i+1])
+ {
+  a[i+1]=a[i+2];
+ }
+ a[n-1]=a[n];
+ for(i=0;i<n;i++)
+ printf("%c",a[i]);
+}
